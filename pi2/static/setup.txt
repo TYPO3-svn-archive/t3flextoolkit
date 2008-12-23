@@ -1,0 +1,251 @@
+plugin.tx_t3flextoolkit_pi2 {
+
+############################################################
+#   compiler settings    
+#  [leave blank for extension config defaults]	 
+############################################################
+
+# leave blank for defaults fileadmin/flexFiles/location
+
+generateCompilerQueItem =   
+autoGenerateSwf = 
+compilerQueItemId = 
+fullMxmlcCompilerLocation = 
+flexFilesPath =
+baseUrl =
+
+extraCompilerOptions = -services=services-config.xml
+antbasedir = 
+
+swfFileName  = 
+sourceFolder = 
+target =
+
+outputfolder = fileadmin/flexFiles/swf/
+swfCacheTimeOut = 
+
+autoFlexSettingsFromFLEXAPPLICATIONid = 
+
+############################################################
+#    movie parameters  
+############################################################
+
+# movie properties
+width =  100
+height = 200
+frameRate = 30
+backgroundColor = #00000
+
+# service config
+serviceconfigId =
+
+# crossdomain-> use like: mydomain.com,otherdomain.org
+crossdomain	=
+
+#getCrossDomainFromThis Page
+
+crossdomainPid     =   {page:id}
+crossdomainType     =  10
+
+abssiteroot 	     =   
+amfServiceUid	     =   
+
+imageuploadFolder  =  
+txuploads 	     =   
+
+############################################################
+#  swfObject parameters 
+# [see http://blog.deconcept.com/swfobject/]
+# [leave blank for random values]	   
+############################################################
+
+# name of the div that js swfObject parses the flashcontent in
+swfFlashContentDivID = 
+swfFlashContentDivStyle =
+
+# leave blank for random objectname, otherwise is static for use with javascript ed
+swfObjecInstanceName = 
+
+## this param adds random var after swf filename... like movie.swf?rnd=52713213
+### so that is preventing to see old versions of your dev application
+swfPreventBrowserAndFlashPlayerCache = true
+
+#use in flex mxml script: Application.application.params.mijnTyposcriptvalue
+flashVarsFromTypoScript=&mijnTyposcriptvalue={$myPassedValueByTypo3}&anotherValue="hello Flex!"
+
+#  auto flash var get them by using
+#  them in flex mxml script: Application.application.params.mijnTyposcriptvalue 
+
+flashVars {
+		
+		variable1=test
+		myXmlFileLocation=test
+		myMp3Files=test
+		justExamples=emampleValue
+}
+
+flashParameters {
+	
+		quality = low
+		wmode   = transparent
+		salign  = t
+}
+}
+############################################################
+#  crossDomain on index.php?id={page:uid}&type=10
+#  them in flex mxml script: Application.application.params.mijnTyposcriptvalue 
+############################################################
+
+
+#### application xml type configs ###
+
+flashCrossDomainPolicy = PAGE
+flashCrossDomainPolicy {
+typeNum=10
+
+config.disableAllHeaderCode = 1
+config.metaCharset = utf-8
+config.additionalHeaders = Content-Type:text/xml;charset=utf-8
+config.admPanel = 0
+config.xhtml_cleaning = 0
+config.admPanel = 0
+
+10 = TEXT
+10.value (<?xml version="1.0"?>
+<cross-domain-policy>
+<allow-access-from domain="{$crossdomain}" />
+
+</cross-domain-policy>
+)
+}
+
+############################################################
+#  crossDomain on index.php?id={page:uid}&type=10
+############################################################
+
+localAssetsAndConfig = PAGE
+localAssetsAndConfig  = PAGE
+localAssetsAndConfig  {
+typeNum=11
+
+config.disableAllHeaderCode = 1
+config.metaCharset = utf-8
+config.additionalHeaders = Content-Type:text/xml;charset=utf-8
+config.admPanel = 0
+config.xhtml_cleaning = 0
+config.admPanel = 0
+
+10 = CONTENT
+10.wrap = <?xml version="1.0" encoding="UTF-8"?><t3constants sevicesConfigId="{$plugin.tx_t3flexmediabrowserV2_pi2.sevicesConfigId}" sevicesConfigType="{$plugin.tx_t3flexmediabrowserV2_pi2.sevicesConfigType}" swfLocation="{$plugin.tx_t3flexmediabrowserV2_pi2.swfLocation}" swfSrc="{$plugin.tx_t3flexmediabrowserV2_pi2.swfSrc}" width="{$plugin.tx_t3flexmediabrowserV2_pi2.width}" height="{$plugin.tx_t3flexmediabrowserV2_pi2.height}" ackgroundColor="{$plugin.tx_t3flexmediabrowserV2_pi2.backgroundColor}" crossdomain="{$plugin.tx_t3flexmediabrowserV2_pi2.crossdomain}" abssiteroot="{$plugin.tx_t3flexmediabrowserV2_pi2.abssiteroot}" amfServiceUid="{$plugin.tx_t3flexmediabrowserV2_pi2.amfServiceUid}" txuploads="{$plugin.tx_t3flexmediabrowserV2_pi2.txuploads}" imageuploads="{$plugin.tx_t3flexmediabrowserV2_pi2.imageuploads}"> | </t3constants>
+10 {
+
+table = tt_content
+select.orderBy = uid
+select.where = 
+select.languageField = sys_language_uid
+
+
+  renderObj= COA
+  renderObj {
+   
+   
+   
+
+      1= TEXT
+     1.value = 
+     1.stdWrap.dataWrap = <t3image tt_content_uid="{field:uid}" tt_content_pid="{page:title}" imagekey="{field:header}" image="{field:image}" | />
+
+    
+
+}
+}
+}
+
+############################################################
+#  crossDomain on index.php?id={page:uid}&type=10
+############################################################
+
+sevicesConfig = PAGE
+sevicesConfig = PAGE
+sevicesConfig {
+	typeNum=11
+	config.disableAllHeaderCode = 1
+	config.metaCharset = utf-8
+	config.additionalHeaders = Content-Type:text/xml;charset=utf-8
+	config.admPanel = 0
+	config.xhtml_cleaning = 0	
+	config.admPanel = 0
+	
+	10 = TEXT
+	10.value (<?xml version="1.0" encoding="UTF-8"?>
+	<services-config>
+		<services>
+			<service id="amfphp-flashremoting-service" class="flex.messaging.services.RemotingService" messageTypes="flex.messaging.messages.RemotingMessage">
+		
+			<destination id="GenericDestination">
+				<channels>
+					<channel ref="my-amfphp"/>
+				</channels>
+				<properties>
+					<source>*</source>
+				</properties>
+			</destination>
+		</service>
+		</services>
+		<channels>
+		<channel-definition id="my-amfphp" class="mx.messaging.channels.AMFChannel">
+			<endpoint uri="{$}index.php?id=89" class="flex.messaging.endpoints.AMFEndpoint"/>
+		</channel-definition>
+		</channels>
+	</services-config>
+	)
+}
+
+
+# example:
+
+# page = PAGE
+# page.typeNum = 0
+# page.10 < plugin.tx_t3flextoolkit_pi2
+
+
+################# Cairngen framework from adobe #################
+# cat=Cairngen; type=string; label="The name of the project in which the generate Cairngorm classes belong"
+project.name        = CairngenExample
+# cat=Cairngen; type=string; label="Flex project directory ( e.g. C:/workbench/efeminella/CairngenExample )In windows replace backslashes (\) characters with forward slashes (/)"    
+root.dir            = C:/workbench/efeminella/CairngenExample/src
+# cat=Cairngen; type=string; label="Project domain suffix ( e.g. com org net edu )"
+com.dir             = com
+# cat=Cairngen; type=string; label="Project domain directory ( e.g: ericfeminella )"
+domain.dir          = domain
+# cat=Cairngen; type=string; label="Specifies the version of Cairngorm which is used to determine the template to use valid versions are as follows: 2.0 2.1 2.2.1 (includes revisions)"
+project.dir         = cairngen
+# cat=Cairngen; type=string; label="specifies the name of an Event Command and Business Delegate (optional) to generate" 
+cairngorm.version   = 2.2.1
+
+################################# CREATING SEQUENCES ##################################
+# cat=Cairngen; type=string;  label="specifies the name of the ValueObject to to be generated"
+sequence.name       = Login, LogOut, CheckIn, CheckOut
+
+################################### CREATING VOs ######################################
+# cat=Cairngen; type=string; label="specifies the name of the ValueObject to to be generated"   
+vo.name             = Login, LogOut, CheckIn, CheckOut
+
+#################### ENABLE REGISTER REMOTE CLASS META-DATA IN VO #####################"
+# cat=Cairngen; type=string;  label="specifies the name of the ValueObject to to be generated"
+vo.remoteClass      = false
+
+############################### READ / WRITE MANAGEMENT ###############################"
+# cat=Cairngen; type=string; label="when true specifies that existing files are to be overwritten default is false"
+overwrite.files     = false
+# cat=Cairngen; type=string; label="when true the user will be prompted prior to deleting directories default is true"
+prompt.on.delete    = true
+ 
+################################## LOG MODIFICATIONS ##################################"
+# cat=Cairngen; type=string; label="when true the console output will be written to a log file default is true"    
+log.output          = true
+
+# cat=Cairngen; type=string; label="The namespace in which project classes belong (e.g. com.domain.project)"        
+namespace           = ${com.dir}.${domain.dir}.${project.dir}
+# cat=Cairngen; type=string; label=Project directories which will be created by the script
+project.uri         = ${root.dir}/${com.dir}/${domain.dir}/${project.dir}

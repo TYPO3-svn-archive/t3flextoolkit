@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
+				layout="absolute" 
+xmlns:view="info.buiswerk.view.*" 
+
+horizontalScrollPolicy="off" verticalScrollPolicy="off"
+				creationComplete="init()" 
+				backgroundColor="#FFFFFF"
+				width="100%" height="100%" xmlns:editor="as3editor.editor.*">
+<mx:Style>
+
+
+@font-face {
+    src: url('../assets/LiberationMono-Bold.ttf');
+    font-weight:bold;
+    font-family: LiberationMono;
+  }
+       
+    
+                     
+   global {
+     font-weight:bold;
+     font-family: LiberationMono;
+	 font-size:15;
+	
+	 theme-color: #FFFFFF;
+     background-color: #FFFFFF;   
+}  
+
+
+</mx:Style>
+<mx:Script>
+		<![CDATA[
+
+		import com.adobe.cairngorm.control.CairngormEvent;
+		import com.adobe.cairngorm.control.CairngormEventDispatcher;
+		import info.buiswerk.model.AppModelLocator;
+
+	
+		[Bindable]
+		private var model : AppModelLocator = AppModelLocator.getInstance();
+		private function init():void {	
+			
+		}
+private function outlineClickHandler( b:int, e:int, match:String ):void
+		{
+			this.editor.markup.selectionBeginIndex =  b;
+			this.editor.markup.selectionEndIndex   =  e;
+			this.editor.markup.setFocus();
+		}
+		]]>
+	</mx:Script>
+<mx:ViewStack  horizontalScrollPolicy="off" verticalScrollPolicy="off" 
+			id="appView" 
+			resizeToContent="true" 
+			selectedIndex="{model.applicationMainView}" 
+			  x="10" y="10" width="763">
+		<mx:HBox>
+		<mx:VBox width="100%" height="582">
+			
+		
+			<editor:EditorTextFormat id="editor" horizontalScrollPolicy="off" verticalScrollPolicy="off" width="100%" height="100%" focusRect="#FFFFFF" />
+			
+	
+	
+		</mx:VBox>
+	
+		</mx:HBox>
+		
+			
+</mx:ViewStack>
+</mx:Application>

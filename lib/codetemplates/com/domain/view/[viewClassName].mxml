@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+<mx:Script>	
+	<![CDATA[
+		
+
+                import com.adobe.cairngorm.control.CairngormEvent;
+		import com.adobe.cairngorm.control.CairngormEventDispatcher;
+		import com.domain.model.AppModelLocator;
+	
+		[Bindable]
+		private var model : AppModelLocator = AppModelLocator.getInstance();
+	
+		
+		
+		]]>
+	</mx:Script>
+
+</mx:Canvas>

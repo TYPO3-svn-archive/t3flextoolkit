@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application 
+xmlns:mx="http://www.adobe.com/2006/mxml"
+xmlns:adobe="http://www.adobe.com/2006/cairngorm"
+xmlns:view=".*"
+xmlns:control="com.domain.control.*" 
+xmlns:business="com.domain.business.*"
+xmlns:local="*"
+backgroundAlpha="0"
+horizontalGap="0"
+layout="absolute"
+horizontalScrollPolicy="off"
+verticalScrollPolicy="off" 
+creationComplete="init()"
+frameRate="100"
+width="100%" 
+height="100%"
+
+useHandCursor="true"
+visible="false"
+applicationComplete="{this.visible=true}"
+>  
+
+<mx:Script> 
+<![CDATA[
+	
+		import info.buiswerk.vo.FlashVars; 
+		
+
+		import com.adobe.cairngorm.control.CairngormEvent;
+		import com.adobe.cairngorm.control.CairngormEventDispatcher;
+		import com.domain.model.AppModelLocator;
+	
+		import mx.core.Application;
+		import flash.system.Security;
+		import com.domain.control.*;
+
+		
+		public var cursorID:uint;
+		[Bindable]
+		private var model : AppModelLocator = AppModelLocator.getInstance();
+		 
+		
+		private function init():void {	
+		
+			
+			model.parameters=new FlashVars(Application.application.parameters);
+			Security.loadPolicyFile(model.parameters.getFlashVar("POLICYFILE") as String);
+			LoadConstants();
+			
+		}
+		
+		
+		private function LoadConstants() : void {
+			
+			trace("START");
+			var cgEvent : LoadConstantsEvent = new LoadConstantsEvent(this);
+			CairngormEventDispatcher.getInstance().dispatchEvent(cgEvent);
+		}
+		
+		public function startServices():void {
+			mainview.selectedIndex=1;			
+		}
+		
+							
+		]]>
+	</mx:Script>
+
+<business:Services id="services" />
+<control:AppController id="appController" />
+
+<mx:ViewStack backgroundAlpha="0" id="mainview" width="100%" height="100%">
+	<mx:Canvas creationPolicy="all" backgroundAlpha="0" width="100%" height="100%">
+		
+	</mx:Canvas>
+	
+	<mx:Canvas creationPolicy="all" backgroundAlpha="0" width="100%" height="100%">
+		<view:MainView creationPolicy="all" width="100%" height="100%"/>
+	</mx:Canvas>
+</mx:ViewStack>
+
+</mx:Application>

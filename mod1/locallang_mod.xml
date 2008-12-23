@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>t3FlexToolkit submodule</description>
+		<type>module</type>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="mlang_labels_tablabel">t3flex project compiler</label>
+			<label index="mlang_labels_tabdescr">This module enables you to compile swf files within the TYPO3 IDE.</label>
+			<label index="mlang_tabs_tab">Compiler</label>
+		</languageKey>
+	</data>
+</T3locallang>

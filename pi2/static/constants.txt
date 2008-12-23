@@ -1,0 +1,40 @@
+plugin.tx_t3flextoolkit_pi2 {
+
+############################################################
+#    			compiler settings   
+############################################################
+
+outputfolder =	fileadmin/flexFiles/swf/
+swfFileName  = 	mySwfFileName.swf
+sourceFolder =	flexFiles/scr/
+
+
+############################################################
+#    			parameters	   
+############################################################
+
+# movie properties
+
+width =  100
+height = 200
+frameRate = 30
+backgroundColor = #00000
+
+# service config
+
+#use comma's for one or mare crossdomains 
+crossdomain = crossdomain.com,otherdomain.org
+
+#fill in for overide this value's from the default typo3 value's
+abssiteroot = 
+
+#uid to AMF SERICE PAGE:
+amfServiceUid = 
+
+imageuploads = uploads/pics/
+txuploads = uploads/tx_t3flextoolkit/
+
+myFirstPassedValueByTypo3 = Hi from TypoScriptConfig
+
+
+}

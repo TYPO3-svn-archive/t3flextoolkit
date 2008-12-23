@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 't3ftoolkit'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pages.tx_t3ftoolkit_code">code</label>
+			<label index="pages.tx_t3ftoolkit_class_name">class_name</label>
+			<label index="pages.tx_t3ftoolkit_project_id">project_id</label>
+			<label index="tt_content.list_type_pi2">typoscript_object_parser</label>
+			<label index="tt_content.list_type_pi3">frontend_compiler</label>
+			<label index="tt_content.list_type_pi5">amf_service_browser</label>
+			<label index="tt_content.list_type_pi6">flash_embedding_via_template</label>
+			
+			
+			
+			<label index="tx_t3flextoolkit_credentials">User credentials</label>
+			<label index="tx_t3flextoolkit_credentials.title">Title</label>
+			<label index="tx_t3flextoolkit_credentials.host">Host</label>
+			<label index="tx_t3flextoolkit_credentials.dbms.I.0">MySql</label>
+			<label index="tx_t3flextoolkit_credentials.dbms.I.1">PostgreSQL</label>
+			<label index="tx_t3flextoolkit_credentials.dbms.I.2">MSSQL Server</label>
+			<label index="tx_t3flextoolkit_credentials.dbms.I.3">Oracle (oci8)</label>
+			<label index="tx_t3flextoolkit_credentials.dbms.I.4">MS Access</label>
+			<label index="tx_t3flextoolkit_credentials.dbms">DBMS type</label>
+			<label index="tx_t3flextoolkit_credentials.username">Username</label>
+			<label index="tx_t3flextoolkit_credentials.passw">Password</label>
+			<label index="tx_t3flextoolkit_credentials.conn_type.I.0">Connect</label>
+			<label index="tx_t3flextoolkit_credentials.conn_type.I.1">PConnect</label>
+			<label index="tx_t3flextoolkit_credentials.conn_type.I.2">NConnect</label>
+			<label index="tx_t3flextoolkit_credentials.conn_type">Connection type</label>
+			<label index="tx_t3flextoolkit_query">Query table</label>
+			<label index="tx_t3flextoolkit_query.title">Title</label>
+			<label index="tx_t3flextoolkit_query.description">AMF service generator</label>
+			<label index="tx_t3flextoolkit_query.query">Query</label>
+
+			<label index="tx_t3flextoolkit_query.search">Search module</label>
+			<label index="tx_t3flextoolkit_query.credentials">User credentials</label>
+			<label index="tx_t3flextoolkit_query.credentials.I.0">Local TYPO3 DB</label>
+			<label index="tx_t3flextoolkit_query.dbname">Database name</label>
+			<label index="tt_content.list_type_pi1">DB Integration</label>
+
+			<label index="tx_t3flextoolkit_query.type">Type</label>
+
+			<label index="tx_t3flextoolkit_query.insertq">Insert form</label>
+
+			<label index="tx_t3flextoolkit_query.type.I.0">AMFPHP service generator</label>
+
+			<label index="tx_t3flextoolkit_query.type.I.1">Insert / Edit</label>
+
+			<label index="tx_t3flextoolkit_query.type.I.2">Search</label>
+
+			<label index="tx_t3flextoolkit_query.searchinquery">Results query</label>
+			<label index="sheet_general">General</label>
+			<label index="sheet_results">Results</label>
+			<label index="sheet_insert">Insert</label>
+			<label index="sheet_search">Search</label>
+			<label index="query">Query record</label>
+			<label index="max_items_in_list">Records for page</label>
+			<label index="debugQuery">Debug query</label>
+			<label index="templateFile">Template</label>
+			<label index="customTemplate">Template type</label>
+			<label index="customTemplate.I.0">From TypoScript</label>
+			<label index="customTemplate.I.1">Default (Table based)</label>
+			<label index="customTemplate.I.2">Custom</label>
+			<label index="resultsPage">Results page</label>
+			<label index="pageConfirmation">Insert confirmation</label>
+			<label index="detailedPage">Record details page</label>
+			<label index="redirectQuery">Redirect parameters</label>
+			<label index="deletedPage">Redirect page on delete</label>
+			<label index="emptyResult">Text for empty result</label>
+			<label index="summary">Summary</label>
+			<label index="caption">Caption</label>
+			<label index="csvDownload">Provide CSV Download?</label>
+			<label index="div_id">ID for the div container</label>
+			<label index="div_search_result_id">ID for the div that contains the results</label>
+
+		</languageKey>
+		<languageKey index="it" type="array">
+			<label index="tx_t3flextoolkit_credentials">Credenziali utente</label>
+			<label index="tx_t3flextoolkit_credentials.title">Titolo</label>
+			<label index="tx_t3flextoolkit_credentials.host">Server</label>
+			<label index="tx_t3flextoolkit_credentials.dbms.I.0">MySql</label>
+			<label index="tx_t3flextoolkit_credentials.dbms.I.1">PostgreSQL</label>
+			<label index="tx_t3flextoolkit_credentials.dbms.I.2">SQL Server</label>
+			<label index="tx_t3flextoolkit_credentials.dbms.I.3">Oracle (oci8)</label>
+			<label index="tx_t3flextoolkit_credentials.dbms">Tipo di DBMS</label>
+			<label index="tx_t3flextoolkit_credentials.username">Nome utente</label>
+			<label index="tx_t3flextoolkit_credentials.passw">Password</label>
+			<label index="tx_t3flextoolkit_query">Tabella delle query</label>
+			<label index="tx_t3flextoolkit_query.title">Titolo</label>
+			<label index="tx_t3flextoolkit_query.description">Descrizione</label>
+			<label index="tx_t3flextoolkit_query.query">Query</label>
+
+			<label index="tx_t3flextoolkit_query.search">Modulo di ricerca</label>
+			<label index="tx_t3flextoolkit_query.credentials">Credenziali Utente</label>
+			<label index="tx_t3flextoolkit_query.credentials.I.0">DB locale di TYPO3</label>
+			<label index="tx_t3flextoolkit_query.dbname">Nome del Database</label>
+			<label index="tt_content.list_type_pi1">DB Integration</label>
+
+			<label index="tx_t3flextoolkit_query.type">Tipo</label>
+
+			<label index="tx_t3flextoolkit_query.insertq">Modulo di inserimento</label>
+
+			<label index="tx_t3flextoolkit_query.type.I.0">Select</label>
+
+			<label index="tx_t3flextoolkit_query.type.I.1">Insert / Edit</label>
+
+			<label index="tx_t3flextoolkit_query.type.I.2">Search</label>
+
+			<label index="tx_t3flextoolkit_query.searchinquery">Query risultati</label>
+			<label index="query">Query record</label>
+			<label index="max_items_in_list">Numero di record per pagina</label>
+			<label index="sheet_general">Generale</label>
+			<label index="sheet_results">Risultati</label>
+			<label index="sheet_insert">Inserimento</label>
+			<label index="sheet_search">Ricerca</label>
+			<label index="debugQuery">Attiva debug</label>
+			<label index="templateFile">Template</label>
+			<label index="customTemplate">Tipo di template</label>
+			<label index="customTemplate.I.0">Da TypoScript</label>
+			<label index="customTemplate.I.1">Default (basato su tabella)</label>
+			<label index="customTemplate.I.2">Personalizzato</label>
+			<label index="resultsPage">Pagina risultati</label>
+			<label index="pageConfirmation">Conferma inserimento</label>
+			<label index="detailedPage">Pagina di dettaglio</label>
+			<label index="redirectQuery">Parametri del redirect</label>
+			<label index="deletedPage">Pagina di redirect dopo cancellazione</label>
+			<label index="emptyResult">Testo per risultato vuoto</label>
+			<label index="summary">Sommario</label>
+			<label index="caption">Caption</label>
+			<label index="csvDownload">Fornire il download in formato CSV?</label>
+			<label index="div_id">ID per il div contenitore</label>
+			<label index="div_search_result_id">ID per il div che contiene i risultati</label>
+			
+		</languageKey>
+	</data>
+</T3locallang>

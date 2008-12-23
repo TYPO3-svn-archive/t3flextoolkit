@@ -1,0 +1,67 @@
+
+
+
+	EDITOR:
+	
+	
+		FEATURES - CODE INJECTION ON CURSORPOSITION A
+				 - HIGHLIGHTER A
+				 - OUTLINER		C
+				 - BASIC CODECOMPLETION B
+				 
+				 
+				 
+				 
+				 
+			TOKENIZER:
+			
+			
+				KEY
+				SCOPE
+				COLOR
+				
+			STRINGBUFFER:
+			
+				LASTWORD
+				
+			PARSER:
+				TIMER
+				PREPARSER
+				PARSERFOCUS
+				
+				
+				
+				
+				MODEL
+					CODE
+					TOKENS
+					STUCTURE
+					
+				VIEW
+					CODEOFFSET
+					OUTLINER
+					CODECOMPLETION BOX
+					
+				EVENTS
+					NEWSELECTION
+					GETSELECTION
+					SETSELECTION
+					GETUSERCURSORSCOPE
+					PREHIGHLIGHT
+					HIGHLIGHTOFFSET
+					LOADTOKENDATA
+					INITVIEW
+					INITAPPLICATION
+					SETOVERALLTEXTSTYLE
+					SETTIMERVALUES
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+						 

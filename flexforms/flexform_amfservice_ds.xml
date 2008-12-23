@@ -1,0 +1,533 @@
+<T3DataStructure>
+	<meta>
+	</meta>
+	<sheets>
+	<sDEF>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>new remoting service</sheetTitle>
+			<description>Select the HTML element on the page which you want to be the overall container element for the template.</description>
+		</TCEforms>
+		<type>Array</type>
+		<el>
+
+
+
+				<mydbfields>
+				<TCEforms>
+			<label>group</label>					
+					<defaultExtras></defaultExtras>
+				<config>
+					
+					<type>group</type>
+					<internal_type>db</internal_type>
+						<allowed>*</allowed>
+							<size>4</size>
+							<maxitems>2</maxitems>
+								<maxitems>0</maxitems>
+				</config>
+				</TCEforms>
+			</mydbfields>
+			<defaultInput>
+				<TCEforms>
+   <exclude>1</exclude>
+  <label>test</label>
+<config> 
+         <type>select</type>
+<items ><items >1</items ></items>
+
+  
+  <foreign_table>tt_content</foreign_table>
+  <foreign_table_where>AND tt_content.pid=###CURRENT_PID###</foreign_table_where>
+
+  <wizards>  
+  <add>
+ 
+			 <type>script</type>
+  			<title>add element</title>
+  			<icon>add.gif</icon>
+  <params>   
+ 			 <table>tt_content</table>
+			 <pid>###THIS_UID###</pid>
+			 <setValue>set</setValue>
+</params>
+ 
+  </add>
+  		 <script>wizard_add.php</script>
+</wizards> 
+	</config>
+	</TCEforms>
+			</defaultInput>		
+<deploydir>
+
+				<TCEforms>
+				<label>deploy dir</label>				
+					<defaultExtras></defaultExtras>
+				 <config type="array">
+           <type>input</type>
+             <size>40</size>
+                 <default>fileadmin/flexFiles/actionscript/</default>
+                <max>256</max>
+               <wizards type="array">
+                  <_PADDING type="integer">2</_PADDING>
+                      <link type="array">
+                      <type>popup</type>
+              <title>Link</title>
+       <icon>link_popup.gif</icon>
+<script>browse_links.php?mode=wizard</script>
+<JSopenParams>height=300,width=500,status=1,menubar=1,scrollbars=1</JSopenParams>
+                                             </link>
+                                         </wizards>
+                                     </config>
+				</TCEforms>
+			</deploydir>
+			
+		
+<classpath>
+				<TCEforms>
+				<label>classpath</label>
+	 <config type="array">
+           <type>input</type>
+             <size>40</size>
+                 <default>fileadmin/flexFiles/actionscript/</default>
+                <max>256</max>
+               <wizards type="array">
+                  <_PADDING type="integer">2</_PADDING>
+                      <link type="array">
+                      <type>popup</type>
+              <title>Link</title>
+       <icon>link_popup.gif</icon>
+<script>browse_links.php?mode=wizard</script>
+<JSopenParams>height=300,width=500,status=1,menubar=1,scrollbars=1</JSopenParams>
+                                             </link>
+                                         </wizards>
+                                     </config>
+</TCEforms>
+</classpath>
+
+			
+				<coptions>
+				<TCEforms>
+				<label>additional compiler options</label>				
+					<defaultExtras></defaultExtras>
+				<config>
+					<type>input</type>					
+						<size>20</size>				
+				</config>
+				</TCEforms>
+			</coptions>			
+		</el>
+	</ROOT>
+	</sDEF>
+	<sDEF3>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>target</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+		<sourcepaths>
+				<TCEforms>
+				<label>classpath</label>				
+					<defaultExtras></defaultExtras>
+			 <config type="array">
+           <type>input</type>
+             <size>40</size>
+                 <default>fileadmin/flexFiles/actionscript/</default>
+                <max>256</max>
+               <wizards type="array">
+                  <_PADDING type="integer">2</_PADDING>
+                      <link type="array">
+                      <type>popup</type>
+              <title>Link</title>
+       <icon>link_popup.gif</icon>
+<script>browse_links.php?mode=wizard</script>
+<JSopenParams>height=300,width=500,status=1,menubar=1,scrollbars=1</JSopenParams>
+                                             </link>
+                                         </wizards>
+                                     </config>
+				</TCEforms>
+			</sourcepaths>
+		<classpath>
+				<TCEforms>
+				<label>target</label>
+	 <config type="array">
+           <type>input</type>
+             <size>40</size>
+                 <default>fileadmin/flexFiles/</default>
+                <max>256</max>
+               <wizards type="array">
+                  <_PADDING type="integer">2</_PADDING>
+                      <link type="array">
+                      <type>popup</type>
+              <title>Link</title>
+       <icon>link_popup.gif</icon>
+<script>browse_links.php?mode=wizard</script>
+<JSopenParams>height=300,width=500,status=1,menubar=1,scrollbars=1</JSopenParams>
+                                             </link>
+                                         </wizards>
+                                     </config>
+</TCEforms>
+</classpath>
+				</el>
+	</ROOT>
+	</sDEF3>
+	
+<sDEF4>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>swf settings</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+
+			<framerate>
+				<TCEforms>
+				<label>framerate</label>				
+					<defaultExtras></defaultExtras>
+				<config>
+					<type>input</type>					
+						<size>3</size>
+						    <default>30</default>
+						<eval>int</eval>
+				</config>
+				</TCEforms>
+			</framerate>
+			<height>
+				<TCEforms>
+				<label>height</label>				
+					<defaultExtras></defaultExtras>
+				<config>
+					<type>input</type>					
+						<size>4</size>
+						    <default>400</default>
+						<eval>int</eval>
+				</config>
+				</TCEforms>
+			
+			</height>
+		
+		
+			
+				<width>
+				<TCEforms>
+				<label>width</label>				
+					<defaultExtras></defaultExtras>
+				<config>
+					<type>input</type>					
+						<size>4</size>
+						    <default>350</default>
+						<eval>int</eval>
+				</config>
+				</TCEforms>
+			</width>
+			
+			
+			<bgcolor>
+				<TCEforms>
+				<label>backgroundcolor</label>				
+					<config>
+					<type>input</type>	
+					 <size>10</size>	
+					     <default>#FFFFFF</default>
+				<wizards>	
+					<colorpick>
+					
+					
+					
+					<type>colorbox</type>	
+					<title>bgcolor</title>	
+						<script>wizard_colorpicker.php</script>					
+						<dim>20x20</dim>
+<tableStyle>border: solid 1px black; margin: 20px;</tableStyle>
+<JSopenParams>height=550,width=365,status=0,menubar=0,scrollbars=1</JSopenParams>	
+<exampleImg>t3lib/gfx/wizard_colorpickerex.jpg</exampleImg>	
+						
+					</colorpick>	
+				</wizards>			
+				</config>
+				</TCEforms>
+			</bgcolor>	
+
+
+
+
+
+				</el>
+	</ROOT>
+	</sDEF4>
+	<sDEF5>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.sheet_general</sheetTitle>
+		</TCEforms>
+		<type>array</type>
+		<el>
+		<what_to_display>
+			<TCEforms>
+				<label>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.what_to_display</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+					<numIndex index="0" type="array">
+						<numIndex index="0">LIST</numIndex>
+						<numIndex index="1">LIST</numIndex>
+					</numIndex>
+					<numIndex index="1" type="array">
+						<numIndex index="0">LATEST</numIndex>
+						<numIndex index="1">LATEST</numIndex>
+					</numIndex>
+					<numIndex index="2" type="array">
+						<numIndex index="0">SINGLE</numIndex>
+						<numIndex index="1">SINGLE</numIndex>
+					</numIndex>
+					<numIndex index="3" type="array">
+						<numIndex index="0">AMENU</numIndex>
+						<numIndex index="1">AMENU</numIndex>
+					</numIndex>
+					<numIndex index="4" type="array">
+						<numIndex index="0">SEARCH</numIndex>
+						<numIndex index="1">SEARCH</numIndex>
+					</numIndex>
+					<numIndex index="5" type="array">
+						<numIndex index="0">CATMENU</numIndex>
+						<numIndex index="1">CATMENU</numIndex>
+					</numIndex>
+					</items>
+					<itemsProcFunc>tx_ttnews_itemsProcFunc->user_insertExtraCodes</itemsProcFunc>
+					<maxitems>100</maxitems>
+					<size>6</size>
+					<multiple>1</multiple>
+					<selectedListStyle>width:150px</selectedListStyle>
+					<itemListStyle>width:150px</itemListStyle>
+				</config>
+			</TCEforms>
+		</what_to_display>
+		<listOrderBy>
+			<TCEforms>
+				<label>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.listOrderby</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+						<numIndex index="0" type="array">
+							<numIndex index="0"></numIndex>
+							<numIndex index="1"></numIndex>
+						</numIndex>
+						<numIndex index="1" type="array">
+							<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.datetime</numIndex>
+							<numIndex index="1">datetime</numIndex>
+						</numIndex>
+						<numIndex index="2" type="array">
+							<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.archivedate</numIndex>
+							<numIndex index="1">archivedate</numIndex>
+						</numIndex>
+						<numIndex index="3" type="array">
+							<numIndex index="0">LLL:EXT:lang/locallang_general.php:LGL.author</numIndex>
+							<numIndex index="1">author</numIndex>
+						</numIndex>
+						<numIndex index="4" type="array">
+							<numIndex index="0">LLL:EXT:lang/locallang_general.php:LGL.title</numIndex>
+							<numIndex index="1">title</numIndex>
+						</numIndex>
+						<numIndex index="5" type="array">
+							<numIndex index="0">LLL:EXT:lang/locallang_general.php:LGL.type</numIndex>
+							<numIndex index="1">type</numIndex>
+						</numIndex>
+						<numIndex index="5" type="array">
+							<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.random</numIndex>
+							<numIndex index="1">random</numIndex>
+						</numIndex>
+					</items>
+					<maxitems>1</maxitems>
+					<size>1</size>
+				</config>
+			</TCEforms>
+		</listOrderBy>
+		<ascDesc>
+			<TCEforms>
+				<label>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.ascDesc</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+					<numIndex index="0" type="array">
+							<numIndex index="0"></numIndex>
+							<numIndex index="1"></numIndex>
+						</numIndex>
+						<numIndex index="1" type="array">
+							<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.ascDesc_asc</numIndex>
+							<numIndex index="1">asc</numIndex>
+						</numIndex>
+						<numIndex index="2" type="array">
+							<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.ascDesc_desc</numIndex>
+							<numIndex index="1">desc</numIndex>
+						</numIndex>
+					</items>
+					<maxitems>1</maxitems>
+					<size>1</size>
+				</config>
+			</TCEforms>
+		</ascDesc>
+		<categoryMode>
+			<TCEforms>
+				<label>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.select_deselect_categories</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+						<numIndex index="0" type="array">
+							<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.category_selection_showAll</numIndex>
+							<numIndex index="1">0</numIndex>
+						</numIndex>
+						<numIndex index="1" type="array">
+							<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.category_selection_showSelected</numIndex>
+							<numIndex index="1">1</numIndex>
+						</numIndex>
+						<numIndex index="2" type="array">
+							<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.category_selection_showSelectedAND</numIndex>
+							<numIndex index="1">2</numIndex>
+						</numIndex>
+						<numIndex index="3" type="array">
+							<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.category_selection_DontShowSelected</numIndex>
+							<numIndex index="1">-1</numIndex>
+						</numIndex>
+						<numIndex index="4" type="array">
+							<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.category_selection_DontShowSelectedOR</numIndex>
+							<numIndex index="1">-2</numIndex>
+						</numIndex>
+					</items>
+					<maxitems>1</maxitems>
+					<size>1</size>
+				</config>
+			</TCEforms>
+		</categoryMode>
+		<categorySelection>
+			<TCEforms>
+				<label>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.category_selection</label>
+				<config>
+					<type>select</type>
+					<form_type>user</form_type>
+					<userFunc>tx_ttnews_treeview->displayCategoryTree</userFunc>
+					<treeView>1</treeView>
+					<foreign_table>tt_news_cat</foreign_table>
+					<foreign_table_where>AND tt_news_cat.pid=###STORAGE_PID### ORDER BY tt_news_cat.sorting</foreign_table_where>
+					<size>5</size>
+					<autoSizeMax>10</autoSizeMax>
+					<minitems>0</minitems>
+					<maxitems>99</maxitems>
+					<itemsHeader>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.itemsHeader</itemsHeader>
+					<items type="array">
+						<numIndex index="100">
+								<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.category_selection_notCategorized</numIndex>
+								<numIndex index="1">0</numIndex>
+						</numIndex>
+					</items>
+					<allowNonIdValues>1</allowNonIdValues>
+				</config>
+			</TCEforms>
+		</categorySelection>
+		<archive>
+			<TCEforms>
+				<label>LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.archive</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+						<numIndex index="0" type="array">
+							<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.archive_dontcare</numIndex>
+							<numIndex index="1">0</numIndex>
+						</numIndex>
+						<numIndex index="1" type="array">
+							<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.archive_arc</numIndex>
+							<numIndex index="1">1</numIndex>
+						</numIndex>
+						<numIndex index="2" type="array">
+							<numIndex index="0">LLL:EXT:tt_news/locallang_tca.php:tt_news.pi_flexform.archive_nonarc</numIndex>
+							<numIndex index="1">-1</numIndex>
+						</numIndex>
+					</items>
+					<maxitems>1</maxitems>
+					<size>1</size>
+				</config>
+			</TCEforms>
+		</archive>
+		<pages>
+			<TCEforms>
+			<exclude>1</exclude>
+			<label>LLL:EXT:lang/locallang_general.php:LGL.startingpoint</label>
+			<config>
+				<type>group</type>
+				<internal_type>db</internal_type>
+				<allowed>pages</allowed>
+				<size>3</size>
+				<maxitems>22</maxitems>
+				<minitems>0</minitems>
+				<show_thumbs>1</show_thumbs>
+			</config>
+			</TCEforms>
+		</pages>
+
+		<recursive>
+			<TCEforms>
+			<label>LLL:EXT:lang/locallang_general.php:LGL.recursive</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+						<numIndex index="0" type="array">
+							<numIndex index="0"></numIndex>
+							<numIndex index="1"></numIndex>
+						</numIndex>
+						<numIndex index="1" type="array">
+							<numIndex index="0">LLL:EXT:cms/locallang_ttc.php:recursive.I.1</numIndex>
+							<numIndex index="1">1</numIndex>
+						</numIndex>
+						<numIndex index="2" type="array">
+							<numIndex index="0">LLL:EXT:cms/locallang_ttc.php:recursive.I.2</numIndex>
+							<numIndex index="1">2</numIndex>
+						</numIndex>
+						<numIndex index="3" type="array">
+							<numIndex index="0">LLL:EXT:cms/locallang_ttc.php:recursive.I.3</numIndex>
+							<numIndex index="1">3</numIndex>
+						</numIndex>
+						<numIndex index="4" type="array">
+							<numIndex index="0">LLL:EXT:cms/locallang_ttc.php:recursive.I.4</numIndex>
+							<numIndex index="1">4</numIndex>
+						</numIndex>
+						<numIndex index="5" type="array">
+							<numIndex index="0">LLL:EXT:cms/locallang_ttc.php:recursive.I.5</numIndex>
+							<numIndex index="1">250</numIndex>
+						</numIndex>
+					</items>
+					<minitems>0</minitems>
+					<maxitems>1</maxitems>
+					<size>1</size>
+				</config>
+			</TCEforms>
+		</recursive>
+		</el>
+	</ROOT>
+	</sDEF5>
+</sheets>
+</T3DataStructure>
+
+
+
+
+		<templatefiles2>
+			<TCEforms>
+				<label>templates selection</label>
+				<config>
+					<type>select</type>
+					<items type="array">
+					</items>
+					<fileFolder>fileadmin/flexFiles/templates/</fileFolder>
+					<fileFolder_extList>tmpl</fileFolder_extList>
+					<fileFolder_recursions >0</fileFolder_recursions>							
+						<minitems>0</minitems>
+						<maxitems>1</maxitems>			
+				</config>
+			</TCEforms>
+		</templatefiles2>
+
+
+
+	
+
+

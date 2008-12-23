@@ -1,0 +1,87 @@
+######################################
+## flex properties
+######################################
+
+
+# cat=basic; type=string; label = "SHOW IN MODULE LIST [LEFT FRAME]"
+showInModuleList = 1
+
+# cat=basic; type=string; label = "FlEX doktype: setting for Flex Application"
+registertodoktypesPROJECT = 195
+
+# cat=basic; type=string; label = "AMF doktype: setting for AMF service creation"
+registertodoktypesAMF = 196
+
+# cat=basic; type=string; label = "actionScript3 doktype"
+registertodoktypesACTIONSCRIPT = 197
+
+# cat=basic; type=string; label = "MXML doktype"
+registertodoktypesMXML=198
+
+# cat=basic; type=string; label = "CSS doktype"
+registertodoktypesCSS = 199
+
+# cat=basic; type=string; label = "SRC doktype: setting for special code generation records and Service creation"
+registertodoktypesTEMPLATE=193
+
+# cat=basic; type=string; label = "SRC doktype: setting for special code generation records and Service creation"
+registertodoktypesCAI=199
+
+# cat=basic; type=string; label = Cairngorm com name (used to create framework folder structure)
+comName = info
+
+# cat=basic; type=string; label = Cairngorm domain name (used to create framework folder structure)
+domainName = buiswerk
+ 
+
+# cat=basic; type=string; label = comments in code headers like <!--  my comments -->>
+AUTHOR_COMMENTS_FOR_CODE_HEADER = <!--  my comments -->>
+ 
+  # cat=basic; type=string; label = default path to the flashlog.txt
+TRACE_LOGGER_FILE_PATH = file:///Users/webserver/Library/Preferences/Macromedia/Flash Player/Logs/flashlog.txt
+ 
+ # cat=basic; type=color; label = default backgroundcolor:
+DEFAULT_BACKGROUND_COLOR = #FFFFFF
+
+ # cat=basic; type=integer;label = default framerate:
+DEFAULT_FRAMERATE=31
+
+ # cat=basic; type=integer;  label = default width:
+ DEFAULT_WIDTH=500
+ 
+ # cat=basic; type=integer; label = default height:
+DEFAULT_HEIGHT=400
+
+ # cat=basic; type=string;label = Flex SDK dir:path to Flex SDK dir
+FLEX_DIR=/Developer/SDKs/Flex
+
+ # cat=basic; type=string;label = path to Flex sdk mxmlc compiler
+MXMLC=/Library/WebServer/as3FlexEditor/fileadmin/flex_sdk_3.0.1.1092/bin/mxmlc
+
+ # cat=basic; type=string;label = path to Flex sdk compc (component) compiler
+COMPC= /Library/WebServer/as3FlexEditor/fileadmin/flex_sdk_3.0.1.1092/bin/mxmlc
+
+ # cat=basic; type=string;label = path to flash player (local)
+ FLASH_PLAYER_LOCAL_BINARY=/Developer/SDKs/Flex/player/debug/SAFlashPlayerDbgRel_UB_en.app/Contents/MacOS/standalone
+ 
+ # cat=basic;  type=string;label=local path to the flex source classes
+FLEX_SRC= frameworks/source
+
+# cat=basic; type=string; label=local path to this extension filecreation / deploy directory
+FLEXFILES_DIR =  fileadmin/flexfiles/
+
+ # cat=basic; type = string;label=(use comma's for more) extra path for uploaded actionscript packages: like nl/org/com etc (relative to fileadmin/flexFiles/)
+CUSTOM_CLASSES =  fileadmin/flexfiles/actionscript/
+ 
+ # cat=basic; type=string;label = dir for swf deployment: (relative to fileadmin)
+SWF_DEPLOY_DIR = fileadmin/flexfiles/swf/
+
+ # cat=basic;type=string;label = dir for mxml creation: (relative to fileadmin)
+MXML_SOURCE_DIR = fileadmin/flexfiles/mxml/
+
+ # cat=basic; type=string;label = dir for css deployment: (relative to fileadmin)
+STYLE_SHEET_DIR =  fileadmin/flexfiles/css/
+
+ # cat=basic; type=string;label = dir for ant deployment: (relative to fileadmin)
+TEMPLATE_DIR =  fileadmin/flexfiles/templates/
+
